@@ -12,13 +12,26 @@
 #include "auto.h"
 
 void compAutoRedRight(){
-  // All the veraious autonomous commands for the Competition, Red Sqaure
+// All the veraious autonomous commands for the Competition, Red Sqaure
   // Right position go here.  THen this function is called in auto.c the autonomous()
   // function based on some selector input.
-  driveForDistancePID(30, 60);     // for 10 meter = 394" at speed 60
-  pivotTurn(0, 30, 90);            // turn at seed 30 for 90 degree angle right turn
-  driveForDistancePID(12, 50);     // After turn drive a bit more forward
+  liftMoveAngle(80, 44.4);
+  driveForDistancePID(10, 80);
+  pivotTurn(0, 80, 100);
+  motorSet(LEFT_M_FRONT, 0);
+  motorSet(RIGHT_M_FRONT, 0);
+  driveForDistancePID(45, 80);
+  pivotTurn(1, 80, 90);
+  driveForDistancePID(14, 80);
+  motorSet(LEFT_M_FRONT, 0);
+  motorSet(RIGHT_M_FRONT, 0);
+  pivotTurn(1, 80, 90);       // turn at seed 30 for 90 degree angle right turn
+  driveForDistancePID(50, 80);     // After turn drive a bit more forward
+  motorSet(CLAW_MOTOR, 80);
+
 }
+
+
 
 void testAutoDrive(){
   // lets drive forward for a set speed using PID and will drive forever

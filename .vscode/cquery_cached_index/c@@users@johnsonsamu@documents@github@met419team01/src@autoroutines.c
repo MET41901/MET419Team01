@@ -15,7 +15,7 @@ void compAutoRedRight(){
 // All the veraious autonomous commands for the Competition, Red Sqaure
   // Right position go here.  THen this function is called in auto.c the autonomous()
   // function based on some selector input.
-  liftMoveAngle(80, 44.4);
+  liftMoveAngle(80, 44);
   driveForDistancePID(10, 80);
   pivotTurn(0, 80, 100);
   motorSet(LEFT_M_FRONT, 0);
